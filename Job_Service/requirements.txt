@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pydantic[email]
+asyncpg
+python-dotenv
+icecream
+pyjwt
+sqlalchemy
+httpx
