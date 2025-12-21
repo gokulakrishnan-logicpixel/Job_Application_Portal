@@ -1,0 +1,312 @@
+/* src/css/CandidateDashboard.css */
+
+/* Layout container */
+.cd-page {
+  display: flex;
+  min-height: calc(100vh - 80px); /* adjust for navbar height */
+  background-color: #f5f7fb;
+}
+
+/* Sidebar */
+.cd-sidebar {
+  width: 220px;
+  padding: 24px 16px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.cd-sidebar-header {
+  margin-bottom: 24px;
+}
+
+.cd-app-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cd-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cd-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.cd-nav-item i {
+  font-size: 16px;
+}
+
+.cd-nav-item:hover {
+  background-color: #f3f4ff;
+  color: #111827;
+}
+
+.cd-nav-item-active {
+  background-color: #eef2ff;
+  color: #111827;
+  font-weight: 500;
+}
+
+.cd-sidebar-illustration {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.cd-sidebar-illustration img {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+}
+
+/* Main area */
+.cd-main {
+  flex: 1;
+  padding: 32px 40px;
+}
+
+.cd-header {
+  margin-bottom: 24px;
+}
+
+.cd-welcome {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Generic section card */
+.cd-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+
+.cd-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cd-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cd-link-button {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cd-arrow {
+  font-size: 14px;
+}
+
+/* Job posting cards */
+.cd-job-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cd-job-card {
+  flex: 1 1 0;
+  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 18px 18px 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.cd-job-card:hover {
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.cd-job-chip-top {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background-color: #e0f7f1;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.cd-job-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.cd-job-location {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.cd-job-chip-bottom {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #facc15;
+  color: #92400e;
+  background-color: #fffbeb;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Recent Applications History */
+.cd-section-history {
+  padding-top: 16px;
+}
+
+.cd-history-list {
+  margin-top: 8px;
+}
+
+.cd-history-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  margin-bottom: 10px;
+}
+
+.cd-history-main {
+  max-width: 55%;
+}
+
+.cd-history-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.cd-history-location {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.cd-history-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cd-history-date {
+  text-align: right;
+}
+
+.cd-history-label {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.cd-history-value {
+  font-size: 12px;
+  color: #111827;
+}
+
+/* Status pills */
+.cd-status-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.status-review {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.status-shortlisted {
+  background-color: #ecfeff;
+  color: #0e7490;
+}
+
+.status-declined {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.cd-more-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Footer link */
+.cd-history-footer {
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cd-page {
+    flex-direction: column;
+  }
+
+  .cd-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .cd-main {
+    padding: 20px 16px;
+  }
+
+  .cd-history-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cd-history-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

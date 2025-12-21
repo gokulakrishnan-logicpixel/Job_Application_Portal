@@ -1,0 +1,306 @@
+/* src/css/HrJobEdit.css */
+
+.hr-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f9fc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Sidebar – reuse same style as other HR pages */
+.hr-sidebar {
+  width: 230px;
+  background: #ffffff;
+  border-right: 1px solid #e4e7ef;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hr-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.hr-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hr-nav-item i {
+  font-size: 16px;
+}
+
+.hr-nav-item:hover {
+  background: #f3f4ff;
+  color: #111827;
+}
+
+.hr-nav-item-active {
+  background: #eef2ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* Illustration in sidebar bottom */
+.hrje-illustration-wrap {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.hrje-illustration {
+  width: 150px;
+  max-width: 100%;
+}
+
+/* Main area */
+.hrje-main-wrap {
+  flex: 1;
+  padding: 24px 40px 40px;
+  font-size: 14px; /* base size */
+}
+
+.hrje-header {
+  margin-bottom: 20px;
+}
+
+.hrje-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Cards layout */
+.hrje-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hrje-card {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 14px 16px;
+}
+
+/* Card headers */
+.hrje-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.hrje-card-header h2,
+.hrje-card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.hrje-job-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Small buttons in headers */
+.hrje-outline-btn,
+.hrje-icon-btn,
+.hrje-square-btn {
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.hrje-icon-btn i {
+  font-size: 14px;
+}
+
+.hrje-square-btn {
+  padding: 4px 8px;
+}
+
+.hrje-outline-btn:hover,
+.hrje-icon-btn:hover,
+.hrje-square-btn:hover {
+  background: #f3f4ff;
+}
+
+.hrje-header-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Textareas for description / responsibilities */
+.hrje-textarea {
+  width: 100%;
+  min-height: 110px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  resize: vertical;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #111827;
+}
+
+.hrje-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+/* Skills section */
+.hrje-skill-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.hrje-input {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.hrje-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.08);
+}
+
+.hrje-add-btn {
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hrje-add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Chips for skills and locations */
+.hrje-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hrje-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.hrje-chip-remove {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Labels / helper text */
+.hrje-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+/* Selects */
+.hrje-select {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  font-size: 13px;
+  background-color: #ffffff;
+}
+
+.hrje-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.08);
+}
+
+/* Bottom actions */
+.hrje-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.hrje-primary-btn {
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 8px 18px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.hrje-primary-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hr-layout {
+    flex-direction: column;
+  }
+
+  .hr-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e4e7ef;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hrje-main-wrap {
+    padding: 16px;
+  }
+
+  .hrje-card {
+    padding: 12px 12px;
+  }
+
+  .hrje-select {
+    width: 100%;
+  }
+
+  .hrje-illustration-wrap {
+    display: none;
+  }
+}

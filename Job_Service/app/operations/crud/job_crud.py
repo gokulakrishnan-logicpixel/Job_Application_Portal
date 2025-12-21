@@ -38,4 +38,4 @@ class JobCrud(BaseCrud):
 
     async def get_all(self):
         q = await self.session.execute(select(Jobs))
-        return q.mappings().all()
+        return q.scalars().all()

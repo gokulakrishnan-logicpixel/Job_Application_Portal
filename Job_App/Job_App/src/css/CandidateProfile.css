@@ -1,0 +1,329 @@
+/* ---------- Base layout (reuses candidate look) ---------- */
+
+.cd-page {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  background-color: #f5f7fb;
+}
+
+/* Sidebar */
+.cd-sidebar {
+  width: 220px;
+  padding: 24px 16px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.cd-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cd-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.cd-nav-item i {
+  font-size: 16px;
+}
+
+.cd-nav-item:hover {
+  background-color: #f3f4ff;
+  color: #111827;
+}
+
+.cd-nav-item-active {
+  background-color: #eef2ff;
+  color: #111827;
+  font-weight: 500;
+}
+
+.cd-sidebar-illustration {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.cd-sidebar-illustration img {
+  max-width: 140px;
+  width: 100%;
+}
+
+/* Main area */
+.cd-main {
+  flex: 1;
+  padding: 32px 40px;
+}
+
+.cd-header {
+  margin-bottom: 16px;
+}
+
+.cd-page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ---------- Profile hero card ---------- */
+
+.cp-hero-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px 24px 24px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+
+.cp-cover {
+  height: 86px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #fbbfef, #c4b5fd, #818cf8);
+}
+
+.cp-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cp-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.cp-role {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.cp-company {
+  text-decoration: underline;
+}
+
+.cp-location {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.cp-edit-btn {
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  padding: 6px 14px;
+  font-size: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* ---------- 2-column layout ---------- */
+
+.cp-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  gap: 20px;
+}
+
+.cp-left,
+.cp-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cards */
+.cp-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.cp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cp-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cp-icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Text */
+.cp-text {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Skills chips */
+.cp-skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cp-skill-chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: #eef2ff;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Details rows */
+.cp-detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.cp-detail-label {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.cp-detail-value {
+  font-size: 13px;
+  color: #111827;
+}
+
+/* Password form */
+.cp-field {
+  margin-bottom: 14px;
+}
+
+.cp-label {
+  display: block;
+  font-size: 12px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.cp-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.cp-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb33;
+}
+
+.cp-hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.cp-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cp-primary-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.cp-secondary-btn {
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  font-size: 13px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cd-page {
+    flex-direction: column;
+  }
+
+  .cd-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .cd-main {
+    padding: 20px 16px;
+  }
+
+  .cp-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* Make the whole page at least viewport height */
+.cd-page {
+  display: flex;
+  min-height: 100vh;            /* or calc(100vh - navbarHeight) */
+}
+
+/* Sidebar as full-height flex column */
+.cd-sidebar {
+  width: 220px;
+  padding: 28px 16px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push illustration to bottom of sidebar */
+.cd-sidebar-illustration {
+  margin-top: auto;             /* eats remaining space above */
+  padding-top: 24px;            /* optional gap from menu */
+}
+
+.cd-sidebar-illustration img {
+  display: block;
+  max-width: 140px;
+}

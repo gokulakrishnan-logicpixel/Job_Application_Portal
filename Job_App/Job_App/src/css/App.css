@@ -1,0 +1,253 @@
+/* ---------- Theme tokens ---------- */
+:root {
+  --primary: #42a5ff;
+  --primary-hover: #2684fa;
+  --bg-dark: #202430;
+  --bg-light: #f5f7fb;
+  --text-main: #111827;
+}
+
+/* Make root stretch full height so footer can sit at bottom */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Default site theme: dark (home, auth, etc.) */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: #ffffff;
+}
+
+/* Light theme for jobs pages + candidate dashboard
+   (body gets class="jobs-body" in those components) */
+body.jobs-body {
+  background-color: var(--bg-light) !important;
+  color: var(--text-main);
+}
+body.no-footer .footer {
+  display: none !important;
+}
+
+/* Layout: stack navbar, page, footer vertically */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: var(--bg-dark) !important;
+  border-bottom: 1px solid #171a23;
+}
+
+.navbar-brand img {
+  transition: transform 0.15s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.03);
+}
+
+.auth-nav {
+  gap: 16px;
+}
+
+.auth-nav-login {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-nav-divider {
+  width: 1px;
+  height: 32px;
+  background-color: #273144;
+}
+
+.auth-nav-signup {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 10px 28px;
+  border-radius: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-nav-signup:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ---------- Hero (home page) ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  padding: 80px 8%;
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  column-gap: 40px;
+}
+
+.hero-left {
+  max-width: 520px;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-illustration {
+  max-width: 420px;
+  width: 100%;
+}
+
+/* Hero animations */
+.hero-title,
+.hero-subtitle,
+.search-bar-new {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroFadeUp 0.6s ease-out forwards;
+}
+
+.hero-title {
+  animation-delay: 0.05s;
+}
+
+.hero-subtitle {
+  animation-delay: 0.18s;
+}
+
+.search-bar-new {
+  animation-delay: 0.3s;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero text */
+.hero-title {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 0.98rem;
+  color: #d1d5db;
+  margin-bottom: 24px;
+}
+
+/* Hero search CTA */
+.search-bar-new {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 6px 6px 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28);
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+}
+
+.input-icon {
+  color: #4b5563;
+  margin-right: 8px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  min-width: 220px;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+/* CTA button */
+.search-btn-new {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(66, 165, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.search-btn-new:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(66, 165, 255, 0.45);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  margin-top: auto;
+  background-color: var(--bg-dark);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-link {
+  color: #0dcaf0;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-icons i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* ---------- Responsive hero ---------- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    padding: 60px 6% 40px;
+    text-align: center;
+  }
+
+  .hero-left {
+    margin: 0 auto;
+  }
+
+  .search-bar-new {
+    justify-content: center;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+}

@@ -1,0 +1,126 @@
+ .jd-page {
+  background-color: #ffffff;
+  min-height: calc(100vh - 72px);
+  padding: 32px 8% 80px;
+}
+
+/* Top header card */
+.jd-header-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.jd-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.jd-meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.jd-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jd-share-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.jd-apply-btn {
+  background-color: #42a5ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Layout */
+.jd-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+  gap: 40px;
+}
+
+/* Left text area */
+.jd-main {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.jd-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.jd-line {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.jd-bullet {
+  color: #16a34a;
+  margin-right: 6px;
+}
+
+.jd-paragraph {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Right sidebar */
+.jd-sidebar {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.jd-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.jd-skill-tag {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .jd-layout {
+    grid-template-columns: 1fr;
+  }
+}
